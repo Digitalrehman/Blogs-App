@@ -1,0 +1,228 @@
+.navbar-container {
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+
+}
+
+.navbar-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-container ul li {
+    list-style: none;
+    padding: 13px 14px;
+
+}
+
+.navbar-container ul li a {
+    text-decoration: none;
+    color: #224;
+    font-weight: 500;
+}
+
+.navbar-container ul li a::after {
+    height: 3px;
+    background-color: #224;
+    width: 0px;
+    content: "";
+    display: block;
+    transition: 0.5s;
+
+}
+
+.navbar-container ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar .AddTask span {
+    border-radius: 25px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.45);
+    font-size: 25px;
+    padding: 10px 13px;
+    transition: all 0.3s ease-in;
+}
+
+.navbar .AddTask span:hover {
+    background-color: #224;
+    color: white;
+}
+
+.navbar-container .nav-item-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.45);
+
+}
+
+.navbar-container .nav-item-search input::placeholder {
+    color: #224;
+}
+
+.navbar-container .nav-item-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+ 
+}
+
+.AddTaskBox {
+
+    display: flex;
+
+
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+
+.AddTaskBox .taskBox video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.AddTaskBox .taskBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 380px;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 10px 0px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+}
+
+.AddTaskBox .taskBox .taskBox-header h1 {
+    color: snow;
+    margin-bottom: 10px;
+}
+
+.AddTaskBox .taskBox .taskBox-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+
+}
+
+.AddTaskBox .taskBox .select {
+
+    padding: 10px 6px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+    color: #224;
+}
+
+.AddTaskBox .taskBox .taskBox-body input {
+    padding: 10px 6px;
+    color: #224;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.AddTaskBox .taskBox .taskBox-body a {
+    text-decoration: none;
+    color: #224;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.90);
+    padding: 10px 16px;
+    width: auto;
+    margin: 5px 0 0 10%;
+    border-radius: 7px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1 1 10px 2px rgba(0, 0, 0, 0.4);
+
+
+}
+
+.AddTaskBox .taskBox .taskBox-body a:hover {
+    background-color: rgba(255, 255, 255, 0.70);
+    box-shadow: 1 1 10px 2px rgba(0, 0, 0, 0.45);
+}
+
+.AddTaskBox .taskBox .taskBox-body a:active {
+    background-color: rgba(255, 255, 255, 0.70);
+}
+
+.AddTaskBox .taskBox .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.AddTaskBox .taskBox .close span {
+    font-size: 22px;
+    color: snow;
+}
+
+@media screen and (max-width : 768px) {
+    .AddTaskBox {
+
+        display: flex;
+
+
+        position: absolute;
+        top: 20%;
+        left: 20%;
+    }
+}
+
+@media screen and (max-width : 488px) {
+    .AddTaskBox {
+
+        display: flex;
+
+
+        position: absolute;
+        top: 20%;
+        left: 5%;
+    }
+
+    .AddTaskBox .taskBox {
+        height: 350px;
+        width: 330px;
+    }
+}
