@@ -1,4 +1,4 @@
-let API_URL = "http://localhost:3500/api"
+let API_URL = "https://blogs-back.vercel.app/"
 
 export {
     API_URL
