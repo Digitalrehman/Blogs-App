@@ -185,6 +185,10 @@
 @media screen and (max-width : 480px) {
   .body .heading {
     width: 96%;
+    
+  }
+  .content{
+     margin-bottom: 20px;
   }
 
   .body .heading h1 {
