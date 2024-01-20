@@ -1,207 +1,230 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital@1&display=swap');
-
-.body {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.navbar-container {
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.45);
 }
 
-.body .heading {
-  width: 50%;
-}
-
-.body .heading h1 {
-  color: snow;
-  font-family: 'Lobster', cursive;
-  font-size: 45px;
-  margin: 10px 0px;
-}
-
-.body .heading h1 span {
-  color: black;
-}
-
-.body .heading p {
-  color: snow;
-  font-family: Lobster;
-  text-align: center;
-}
-
-.body .heading .button-login {
-  margin: 25px 35%;
-}
-
-.body .heading .button-login a {
-  text-decoration: none;
-  padding: 17px 45px;
-  font-size: 18px;
-  line-height: 50px;
-  font-weight: 600;
-  background: #dde1e7;
-  border-radius: 6px;
-  cursor: pointer;
-  color: #595959;
-  box-shadow: 3px 3px 5px #07153e,
-    -2px -5px 10px #06040e73;
-}
-
-.body .heading .button-login a:focus {
-  color: #3498db;
-  box-shadow: inset 2px 2px 5px #BABECC,
-    inset -5px -5px 10px #ffffff73;
-}
-
-.content {
-  height: auto !important;
-  width: 330px;
-  padding: 40px 30px;
-  background: #dde1e7;
-  border-radius: 15px;
-  box-shadow: 3px 3px 5px 3px rgba(1, 1, 12, 0.254),
-    -2px -2px 4px 2px rgba(2, 11, 11, 0.065);
-}
-
-.content .text {
-  font-size: 33px;
-  font-weight: 600;
-  margin-bottom: 35px;
-  color: #595959;
-  text-align: center;
-}
-
-.field {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  position: relative;
-  margin-top: 10px;
+.navbar {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
 
 }
 
-
-
-.field input {
-  height: 100%;
-  width: 100%;
-  padding-left: 45px;
-  outline: none;
-  border: none;
-  font-size: 18px;
-  background: #dde1e7;
-  color: #595959;
-  border-radius: 25px;
-  box-shadow: inset 2px 2px 5px #BABECC,
-    inset -5px -5px 10px #ffffff73;
+.navbar-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.field input:focus {
-  box-shadow: inset 1px 1px 2px #BABECC,
-    inset -1px -1px 2px #ffffff73;
+.navbar-container ul li {
+    list-style: none;
+    padding: 13px 14px;
+
 }
 
-.field span {
-  position: absolute;
-  color: #595959;
-  width: 50px;
-  line-height: 50px;
-  margin-left: 15px;
+.navbar-container ul li a {
+    text-decoration: none;
+    color: #224;
+    font-weight: 500;
 }
 
-.field label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 45px;
-  pointer-events: none;
-  color: #666666;
+.navbar-container ul li a::after {
+    height: 3px;
+    background-color: #224;
+    width: 0px;
+    content: "";
+    display: block;
+    transition: 0.5s;
+
 }
 
-.field input:valid~label {
-  opacity: 0;
+.navbar-container ul li a:hover::after {
+    width: 100%;
 }
 
-.forgot-pass {
-  text-align: left;
-  margin: 10px 0 10px 5px;
+.navbar .AddTask span {
+    border-radius: 25px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.45);
+    font-size: 25px;
+    padding: 10px 13px;
+    transition: all 0.3s ease-in;
 }
 
-.forgot-pass a {
-  font-size: 16px;
-  color: #3498db;
-  text-decoration: none;
+.navbar .AddTask span:hover {
+    background-color: #224;
+    color: white;
 }
 
-.forgot-pass:hover a {
-  text-decoration: underline;
+.navbar-container .nav-item-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.45);
+
 }
 
-.button button {
-  text-decoration: none;
-  border: none;
-  outline: none;
-  margin: 0px 50px;
-  padding: 0px 45px;
-  font-size: 18px;
-  line-height: 50px;
-  font-weight: 600;
-  background: #dde1e7;
-  border-radius: 25px;
-  cursor: pointer;
-  color: #595959;
-  box-shadow: 3px 3px 5px #BABECC,
-    -5px -5px 10px #ffffff73;
+.navbar-container .nav-item-search input::placeholder {
+    color: #224;
 }
 
-.button button:focus {
-  color: #3498db;
-  box-shadow: inset 2px 2px 5px #BABECC,
-    inset -5px -5px 10px #ffffff73;
+.navbar-container .nav-item-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+
 }
 
-.sign-up {
-  margin: 10px 0;
-  color: #595959;
-  font-size: 16px;
+.AddTaskBox {
+
+    display: flex;
+
+
+    position: absolute;
+    top: 20%;
+    left: 40%;
 }
 
-.sign-up a {
-  color: #3498db;
-  text-decoration: none;
+.AddTaskBox .taskBox video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 }
 
-.sign-up a:hover {
-  text-decoration: underline;
+.AddTaskBox .taskBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 10px 0px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+}
+
+.AddTaskBox .taskBox .taskBox-header h1 {
+    color: snow;
+    margin-bottom: 10px;
+}
+
+.AddTaskBox .taskBox .taskBox-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+
+}
+
+.AddTaskBox .taskBox .select {
+
+    padding: 10px 6px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+    color: #224;
+}
+
+.AddTaskBox .taskBox .taskBox-body input {
+    padding: 10px 6px;
+    color: #224;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.AddTaskBox .taskBox .taskBox-body a {
+    text-decoration: none;
+    color: #224;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.90);
+    padding: 10px 16px;
+    width: auto;
+    margin: 5px 0 0 10%;
+    border-radius: 7px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1 1 10px 2px rgba(0, 0, 0, 0.4);
+
+
+}
+
+.AddTaskBox .taskBox .taskBox-body a:hover {
+    background-color: rgba(255, 255, 255, 0.70);
+    box-shadow: 1 1 10px 2px rgba(0, 0, 0, 0.45);
+}
+
+.AddTaskBox .taskBox .taskBox-body a:active {
+    background-color: rgba(255, 255, 255, 0.70);
+}
+
+.AddTaskBox .taskBox .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.AddTaskBox .taskBox .close span {
+    font-size: 22px;
+    color: snow;
 }
 
 @media screen and (max-width : 768px) {
-  .body .heading {
-    width: 85%;
-  }
+    .AddTaskBox {
+
+        display: flex;
+
+
+        position: absolute;
+        top: 20%;
+        left: 20%;
+    }
 }
 
 @media screen and (max-width : 480px) {
-  .body .heading {
-    width: 96%;
-    
-  }
-  .content{
-     margin-bottom: 20px;
-  }
+    .AddTaskBox {
+        left: 3%;
+    }
 
-  .body .heading h1 {
-    font-size: 38px;
-    text-align: center;
-  }
+    .AddTaskBox .taskBox {
+        width: 330px;
+    }
 
-  .body .heading .button-login {
-    display: none;
-  }
+    .home {
+        display: none;
+    }
 
-  .body .heading p {
-    margin-bottom: 20px;
+    .navbar-container .nav-item-search input {
+        width: 170px;
 
-  }
+    }
 }
