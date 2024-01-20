@@ -83,7 +83,7 @@
     border: none;
     outline: none;
     background: transparent;
-    padding: 9px;
+    padding: 8px;
 
 }
 
@@ -115,7 +115,7 @@
     justify-content: center;
     align-items: center;
     height: 350px;
-    width: 370px;
+    width: 350px;
     border-radius: 10px;
     z-index: 1;
     padding: 10px 0px;
@@ -212,10 +212,11 @@
 
 @media screen and (max-width : 480px) {
     .AddTaskBox {
-        display: flex;
-        position: absolute;
-        top: 20%;
-        left: 4%;
+        left: 3%;
+    }
+
+    .AddTaskBox .taskBox {
+        width: 330px;
     }
 
     .home {
@@ -225,8 +226,5 @@
     .navbar-container .nav-item-search input {
         width: 170px;
 
-    }
-    .AddTaskBox .taskBox {
-        width : 350px;
     }
 }
