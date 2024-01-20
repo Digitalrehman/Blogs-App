@@ -83,7 +83,7 @@
     border: none;
     outline: none;
     background: transparent;
-    padding: 8px;
+    padding: 9px;
 
 }
 
@@ -115,7 +115,7 @@
     justify-content: center;
     align-items: center;
     height: 350px;
-    width: 380px;
+    width: 370px;
     border-radius: 10px;
     z-index: 1;
     padding: 10px 0px;
@@ -215,7 +215,7 @@
         display: flex;
         position: absolute;
         top: 20%;
-        left: 5%;
+        left: 4%;
     }
 
     .home {
@@ -225,5 +225,8 @@
     .navbar-container .nav-item-search input {
         width: 170px;
 
+    }
+    .AddTaskBox .taskBox {
+        width : 350px;
     }
 }
