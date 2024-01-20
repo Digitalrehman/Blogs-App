@@ -122,13 +122,13 @@ const Navigation = () => {
       <div className="navbar">
         <div className="navbar-container">
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item home">
               <Link to="/Home">Home</Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item home">
               <Link to="/Favourite">Favourite</Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item home">
               <Link to="/Saved">Saved</Link>
             </li>
             <li className="nav-item">
