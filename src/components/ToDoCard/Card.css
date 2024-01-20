@@ -4,8 +4,12 @@
 }
 
 .body-card {
+  margin-top: 8%;
   font: 1em/1.618 Inter, sans-serif;
   flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   color: #224;
 }
 
@@ -107,4 +111,14 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: end;
+}
+
+@media screen and (max-width : 480px) {
+  .card {
+    width: 18rem;
+  }
+
+  .body-card {
+    margin-top: 20%;
+  }
 }
