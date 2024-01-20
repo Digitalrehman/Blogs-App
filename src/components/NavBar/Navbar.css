@@ -84,7 +84,7 @@
     outline: none;
     background: transparent;
     padding: 8px;
- 
+
 }
 
 .AddTaskBox {
@@ -210,19 +210,20 @@
     }
 }
 
-@media screen and (max-width : 488px) {
+@media screen and (max-width : 480px) {
     .AddTaskBox {
-
         display: flex;
-
-
         position: absolute;
         top: 20%;
         left: 5%;
     }
 
-    .AddTaskBox .taskBox {
-        height: 350px;
-        width: 330px;
+    .home {
+        display: none;
+    }
+
+    .navbar-container .nav-item-search input {
+        width: 170px;
+
     }
 }
