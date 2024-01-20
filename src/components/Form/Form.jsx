@@ -77,11 +77,17 @@ const Form = ({ ispage }) => {
     <>
       <div className="body">
         <div className="heading">
-          <h1>Project managment Application</h1>
+          <h1>
+            <span>Welcome !</span> to Blog Post
+          </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex earum,
-            quia ipsam expedita eius enim voluptate architecto labore fugit
-            suscipit!
+            Embark on a journey of self-expression and community. Your presence
+            adds another layer to the rich tapestry of voices woven together at
+            Blog Post.
+          </p>
+          <p>
+            Ready to share your story? Click "Create Account" and become part of
+            our growing family of storytellers.
           </p>
           {ispage ? (
             <div className="button-login">
