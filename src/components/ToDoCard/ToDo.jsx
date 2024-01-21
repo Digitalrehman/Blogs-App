@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Card.css";
 import { MdEditDocument } from "react-icons/md";
@@ -17,8 +17,6 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from "react-share";
-import { addBookMark } from "../../Store/Slice/index";
-import { useDispatch } from "react-redux";
 
 const ToDo = ({
   task,
@@ -28,20 +26,25 @@ const ToDo = ({
   setGetallTask,
 }) => {
   let shareUrl = "https://drehmanportfolio.netlify.app";
-  let dispetch = useDispatch();
   let [like, setLike] = useState(false);
   let [count, setCount] = useState("");
-  let [book, setBook] = useState(Array(task.length).fill(false));
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    localStorage.setItem("bookmarkedPosts", JSON.stringify(book));
+  },  [book, task]);
 
+  const handleBookmarkClick = (index) => {
+    setBook((prevBook) => {
+      const bookmarkedPost = {
+        ...task[index],
+        bookmarked: true,
+      };
+      return [...prevBook, bookmarkedPost];
+    });
+  };
   const LikeHandler = () => {
     setLike(!like);
     setCount(like ? count - 1 : count + 1);
-  };
-
-  const bookHandler = (index) => {
-    let updatedBook = [...book];
-    updatedBook[index] = !updatedBook[index];
-    setBook(updatedBook);
   };
 
   const editTaskHandler = (index) => {
@@ -68,11 +71,6 @@ const ToDo = ({
       .catch((error) => {
         errornotify(error.response.data.message);
       });
-  };
-
-  let AddCArdHandler = (item) => {
-    bookHandler();
-    dispetch(addBookMark(item));
   };
 
   return (
@@ -119,15 +117,12 @@ const ToDo = ({
                   </span>
 
                   <Link to="#">
-                    {!book ? (
-                      <FaRegBookmark onClick={bookHandler} />
-                    ) : (
-                      <FaBookmark
-                        onClick={() => {
-                          bookHandler;
-                          AddCArdHandler(item);
-                        }}
+                    {!book.some((item) => item._id === task[index]._id) ? (
+                      <FaRegBookmark
+                        onClick={() => handleBookmarkClick(index)}
                       />
+                    ) : (
+                      <FaBookmark onClick={() => handleBookmarkClick(index)} />
                     )}
                   </Link>
                 </div>
