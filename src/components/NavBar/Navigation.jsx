@@ -125,13 +125,13 @@ const Navigation = () => {
             <li className="nav-item home">
               <Link to="/Home">Home</Link>
             </li>
-            <li className="nav-item home">
+            <li className="nav-item ">
               <Link to="/Favourite">Favourite</Link>
             </li>
             <li className="nav-item home">
               <Link to="/Saved">Saved</Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item home">
               <Link to="/Login">Logout</Link>
             </li>
             <li className="nav-item-search">
@@ -179,7 +179,7 @@ const Navigation = () => {
               <input
                 type="text"
                 className="select"
-                placeholder="Name"
+                placeholder="Author"
                 name="status"
                 value={task.status}
                 onChange={AddTaskHandler}
