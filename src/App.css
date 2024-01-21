@@ -1,8 +1,8 @@
 .body{
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background : url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover;
+    background : url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) repeat center / cover;
 }
