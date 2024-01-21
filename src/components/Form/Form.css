@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital@1&display=swap');
-
+.body{
+  display: flex;
+  flex-wrap: wrap;
+}
 .body .heading {
   width: 50%;
+  text-align: center;
 }
 
 .body .heading h1 {
   color: snow;
   font-family: 'Lobster', cursive;
   font-size: 45px;
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
 }
 
 .body .heading h1 span {
@@ -22,10 +26,10 @@
 }
 
 .body .heading .button-login {
-  margin: 25px 35%;
+  margin: 25px;
 }
 
-.body .heading .button-login a {
+.body .heading .button-login a{
   text-decoration: none;
   padding: 17px 45px;
   font-size: 18px;
@@ -35,8 +39,11 @@
   border-radius: 6px;
   cursor: pointer;
   color: #595959;
-  box-shadow: 3px 3px 5px #07153e,
-    -2px -5px 10px #06040e73;
+  box-shadow: 1px 3px 10px #07153e;
+  transition: all 0.4s ease;
+}
+.body .heading .button-login a:hover{
+  box-shadow: 2px 4px 15px black;
 }
 
 .body .heading .button-login a:focus {
