@@ -101,9 +101,9 @@ const Form = ({ ispage }) => {
         </div>
         <div className="content">
           {!ispage ? (
-            <div className="text">Sign Up</div>
+            <div className="text">SignUp</div>
           ) : (
-            <div className="text">Sign In</div>
+            <div className="text">SignIn</div>
           )}
 
           <form onSubmit={submitHandler}>
