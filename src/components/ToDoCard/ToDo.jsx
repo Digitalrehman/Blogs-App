@@ -31,7 +31,7 @@ const ToDo = ({
   const [book, setBook] = useState([]);
   useEffect(() => {
     localStorage.setItem("bookmarkedPosts", JSON.stringify(book));
-  },  [book, task]);
+  }, [book, task]);
 
   const handleBookmarkClick = (index) => {
     setBook((prevBook) => {
@@ -80,7 +80,7 @@ const ToDo = ({
           task.map((item, index) => (
             <div className="card" key={item._id} onDoubleClick={LikeHandler}>
               <h2>{item.title}</h2>
-              <p className="description">{item.description}</p>
+              <div className="description">{item.description}</div>
               <h4>Author</h4>
               <p className="footer">{item.status}</p>
               <div className="date">
